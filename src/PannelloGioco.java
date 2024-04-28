@@ -7,7 +7,6 @@ import javax.swing.JPanel;
 
 public class PannelloGioco extends JPanel implements ActionListener {
 
-    private static final long serialVersionUID = 1L;
 
     // Costanti per le dimensioni del pannello di gioco e delle unità
     static final int WIDTH = 500;
