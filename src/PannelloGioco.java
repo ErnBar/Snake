@@ -20,7 +20,7 @@ public class PannelloGioco extends JPanel implements ActionListener {
     final int y[] = new int[NUMBER_OF_UNITS];
 
     // Lunghezza iniziale del serpente, cibo mangiato, coordinate del cibo
-    int length = 5;
+    int length = 2;
     int foodEaten;
     int foodX;
     int foodY;
@@ -54,7 +54,7 @@ public class PannelloGioco extends JPanel implements ActionListener {
         running = true;
 
         // Crea un timer per controllare il movimento del serpente
-        timer = new Timer(80, this);
+        timer = new Timer(100, this);
         timer.start();
     }
 
@@ -84,13 +84,13 @@ public class PannelloGioco extends JPanel implements ActionListener {
         }
 
         if (direction == 'L') {
-            x[0] = x[0] - UNIT_SIZE;
+            x[0] = x[0] - UNIT_SIZE; // Muove la testa del serpente verso sinistra
         } else if (direction == 'R') {
-            x[0] = x[0] + UNIT_SIZE;
+            x[0] = x[0] + UNIT_SIZE; // Muove la testa del serpente verso destra
         } else if (direction == 'U') {
-            y[0] = y[0] - UNIT_SIZE;
+            y[0] = y[0] - UNIT_SIZE; // Muove la testa del serpente verso l'alto
         } else {
-            y[0] = y[0] + UNIT_SIZE;
+            y[0] = y[0] + UNIT_SIZE; // Muove la testa del serpente verso il basso
         }
     }
 
